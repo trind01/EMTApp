@@ -65,8 +65,17 @@ class PageView extends Component {
 				this.treeLabel = "If they have difficult breathing perform abdominal thrusts.";
 				this.buttonsInstance = (<img src="https://www.padelandia.com/wp-content/uploads/2014/01/animacion-maniobra-de-heimlich.gif" alt="Gif of heimlich maneuver"/>);
 				this.setState((state) => ({ treePath:2}));
-
 				break;
+			case 2:
+				this.treeLabel = "Apply direct pressure to the wound";
+				this.buttonsInstance = (<img src="https://i.gifer.com/HS2k.gif" alt="Gif stop the blood");
+				this.setState((state)=> ({treePath:3}));
+				break;
+			case 5:
+			this.treeLabel = "Do not attempt to get them to thorw up";
+			this.buttonsInstance = (<img src="http://www.nebraskapoison.com/App_Files/images/poisonHelp.gif" alt="posion center");
+			this.setState((state)=> ({treePath:6}));
+			break;
 		}
 	}
 
