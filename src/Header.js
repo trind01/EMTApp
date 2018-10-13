@@ -1,15 +1,15 @@
 import React from 'react';
 import "./Header.css";
-import { PageHeader } from 'react-bootstrap';
+import { Label } from 'react-bootstrap';
 
 function Header(props) {
 	return (
-	<div>
-		<div >
-			<PageHeader>
-			  ez911
-			</PageHeader>
-		</div>
+	<div className="header">
+		<h1>
+		<Label bsStyle='danger'>
+		  ez911
+		</Label>
+		</h1>
 	</div>
     );
 }
