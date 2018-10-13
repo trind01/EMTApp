@@ -36,16 +36,6 @@ class PageView extends Component {
 			    </Button>
 		    </div>
 		);
-		this.viewInstance = (
-		  <div className="well" style={wellStyles}>
-		  	<div className="treeLabel">
-		  		<h2>
-		  		<Label> {this.treeLabel} </Label>
-		  		</h2>
-		  	</div>
-		  	{this.buttonsInstance}
-		  </div>
-		);
 	}
 
 	handleClick(e) {
@@ -67,12 +57,15 @@ class PageView extends Component {
 	{
 		switch(parseInt(id)){
 			case 0:
-				this.treeLabel = "If they don't have a pulse and no AED is near: PERFORM CPR"
+				this.treeLabel = "If they don't have a pulse and no AED is near: PERFORM CPR";
 				this.buttonsInstance = (<img src="https://media.giphy.com/media/d07PtnTq0oVsk/giphy.gif" alt="Gif og CPR"/>);
 				this.setState((state) => ({ treePath:1}));
-				this.rebuildView();
 				break;
 			case 1:
+				this.treeLabel = "If they have difficult breathing perform abdominal thrusts.";
+				this.buttonsInstance = (<img src="https://www.padelandia.com/wp-content/uploads/2014/01/animacion-maniobra-de-heimlich.gif" alt="Gif of heimlich maneuver"/>);
+				this.setState((state) => ({ treePath:2}));
+
 				break;
 		}
 	}
@@ -82,25 +75,19 @@ class PageView extends Component {
 
 	}
 
-	rebuildView()
-	{
-		this.viewInstance = (
-		  <div className="well" style={wellStyles}>
-		  	<div className="treeLabel">
-		  		<h2>
-		  		<Label> {this.treeLabel} </Label>
-		  		</h2>
-		  	</div>
-		  	{this.buttonsInstance}
-		  </div>
-		);
-	}
 
 	render() {
 		return (
 		<div>
 			<div >
-				{this.viewInstance}
+				<div className="well" style={wellStyles}>
+				  	<div className="treeLabel">
+				  		<h2>
+				  		<Label> {this.treeLabel} </Label>
+				  		</h2>
+				  	</div>
+				  	{this.buttonsInstance}
+				</div>
 			</div>
 		</div>
 	    );
