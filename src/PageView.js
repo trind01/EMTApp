@@ -78,17 +78,17 @@ class PageView extends Component {
 			case 0:
 				this.treeLabel = "Do they have a pulse";
 				this.buttonsInstance = (
-			<div>
-			    <Button bsStyle="primary" bsSize="lg" block onClick={this.handleClick} id='0'>
-			      No Pulse
-			    </Button>
-			    <Button bsStyle="primary" bsSize="lg" block onClick={this.handleClick} id='1'>
-			      Pulse
-			    </Button>
-			    
-			</div>
+					<div>
+					    <Button bsStyle="primary" bsSize="lg" block onClick={this.handleClick} id='0'>
+					      No Pulse
+					    </Button>
+					    <Button bsStyle="primary" bsSize="lg" block onClick={this.handleClick} id='1'>
+					      Pulse
+					    </Button>
+					    
+					</div>
 
-		);
+				);
 				this.setState((state) => ({ treePath:1}));
 				break;
 			case 1:
@@ -138,7 +138,7 @@ class PageView extends Component {
 	{
 		switch(parseInt(id,10)){
 			case 0:
-			this.treeLabel = "No Pulse"
+			this.treeLabel = "Call 911. No AED is near: PERFORM CPR"
 			this.buttonsInstance = (<img src="https://media.giphy.com/media/d07PtnTq0oVsk/giphy.gif" alt="Gif og CPR"/>);
 			this.setState((state) => ({treePath:20}));
 			break;
@@ -147,9 +147,6 @@ class PageView extends Component {
 			//Goes to unsure
 			this.path99(0);
 			break;
-
-
-
 
 		}
 	}
@@ -162,11 +159,6 @@ class PageView extends Component {
 				this.buttonsInstance = (<img src="https://i.gifer.com/HS2k.gif" alt="Gif stop the blood"/>);
 				this.setState((state)=> ({treePath:3}));
 				break;
-
-		
-
-
-
 		}
 	}
 
@@ -175,12 +167,12 @@ class PageView extends Component {
 		switch(parseInt(id,10)){
 			case 0:
 				this.treeLabel = "If patient has EpiPen, encourage its use.";
-				this.buttonsInstance = (<img src="https://jamanetwork.com/data/Journals/JAMA/935769/jch160035fa.png"/>);
+				this.buttonsInstance = (<img src="https://snacksafely.com/wp-content/uploads/2017/05/EpiPens-696x364.jpg" alt="EpiPen"/>);
 				this.setState((state)=> ({treePath:60}));
 				break;
 			case 1:
 				this.treeLabel = "If they have difficulty breathing, preform abdominal thrusts";
-				this.buttonInstance = (<img src="https://www.padelandia.com/wp-content/uploads/2014/01/animacion-maniobra-de-heimlich.gif" alt="preform abdominal"/>);
+				this.buttonsInstance = (<img src="https://www.padelandia.com/wp-content/uploads/2014/01/animacion-maniobra-de-heimlich.gif" alt="preform abdominal"/>);
 				this.setState((state)=> ({treePath:61}));
 				break;
 			case 2:
@@ -191,7 +183,7 @@ class PageView extends Component {
 			case 3:
 				this.treeLabel = "Wait 2-3 minutes. If it gets worse call 911";
 				this.buttonsInstance = (<div></div>);
-				this.setSate((state)=> ({treepath:63}));
+				this.setState((state)=> ({treepath:63}));
 				break;
 		}
 	}
@@ -214,9 +206,7 @@ class PageView extends Component {
 				this.setState((state) => ({ treePath:100}));
 				break;
 			case 1:
-				this.treeLabel = "Call 911. No AED is near: PERFORM CPR";
-				this.buttonsInstance = (<img src="https://media.giphy.com/media/d07PtnTq0oVsk/giphy.gif" alt="Gif og CPR"/>);
-				this.setState((state) => ({ treePath:101}));
+				this.path1(0);
 				break;
 		}
 	}
@@ -256,7 +246,7 @@ class PageView extends Component {
 		switch(parseInt(id,10))
 		{
 			case 0:
-				//GO TO BLEEDING
+				this.path0(2);
 				break;
 			case 1:
 				this.treeLabel = "Wait 2-3 minutes, if it doe not get better call 911";
