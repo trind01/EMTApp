@@ -131,16 +131,6 @@ class PageView extends Component {
 					);
 				this.setState((state)=> ({treePath:99}));
 				break;
-			case 5:
-				this.treeLabel = "Do not attempt to get them to throw up";
-				this.buttonsInstance = (<img src="http://www.nebraskapoison.com/App_Files/images/poisonHelp.gif" alt="posion center"/>);
-<<<<<<< HEAD
-				this.setState((state) => ({treePath:6}));
-			break;
-=======
-				this.setState((state)=> ({treePath:6}));
-				break;
->>>>>>> 36d5e20ad223c1f9add328dbd17e896490d31de2
 		}
 	}
 
@@ -155,9 +145,7 @@ class PageView extends Component {
 
 			case 1:
 			//Goes to unsure
-			this.treeLabel = "Pulse"
-			this.buttonsInstance = (<div></div>);
-			this.setState((state) => ({treePath:100}));
+			this.path99(0);
 			break;
 
 
@@ -259,7 +247,7 @@ class PageView extends Component {
 				break;
 			case 1:
 				//Go To troubled Breathing
-				this.path0(2);
+				this.path0(1);
 				break;
 		}
 	}
