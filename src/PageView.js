@@ -45,6 +45,7 @@ class PageView extends Component {
 			case 3:
 				break;
 			case 4:
+			this.path4(id);
 				break;
 			case 5:
 				break;
@@ -63,8 +64,19 @@ class PageView extends Component {
 	{
 		switch(parseInt(id,10)){
 			case 0:
-				this.treeLabel = "If they don't have a pulse and no AED is near: PERFORM CPR";
-				this.buttonsInstance = (<img src="https://media.giphy.com/media/d07PtnTq0oVsk/giphy.gif" alt="Gif og CPR"/>);
+				this.treeLabel = "Do they have a pulse";
+				this.buttonsInstance = (
+			<div>
+			    <Button bsStyle="primary" bsSize="lg" block onClick={this.handleClick} id='0'>
+			      No Pulse
+			    </Button>
+			    <Button bsStyle="primary" bsSize="lg" block onClick={this.handleClick} id='1'>
+			      Pulse
+			    </Button>
+			    
+			</div>
+
+		);
 				this.setState((state) => ({ treePath:1}));
 				break;
 			case 1:
@@ -80,14 +92,47 @@ class PageView extends Component {
 			case 5:
 				this.treeLabel = "Do not attempt to get them to throw up";
 				this.buttonsInstance = (<img src="http://www.nebraskapoison.com/App_Files/images/poisonHelp.gif" alt="posion center"/>);
-				this.setState((state)=> ({treePath:6}));
+				this.setState((state) => ({treePath:6}));
 			break;
 		}
 	}
 
 	path1(id)
 	{
+		switch(parseInt(id,10)){
+			case 0:
+			this.treeLabel = "No Pulse"
+			this.buttonsInstance = (<img src="https://media.giphy.com/media/d07PtnTq0oVsk/giphy.gif" alt="Gif og CPR"/>);
+			this.setState((state) => ({treePath:20}));
+			break;
 
+			case 1:
+			//Goes to unsure
+			this.treeLabel = "Pulse"
+			this.buttonsInstance = (<div></div>);
+			this.setState((state) => ({treePath:100}));
+			break;
+
+
+
+
+		}
+	}
+
+	path4(id)
+	{
+		switch(parseInt(id,10)){
+			case 0:
+			this.treeLabel = "Apply Pressure: Are they maintaining a pulse";
+				this.buttonsInstance = (<img src="https://i.gifer.com/HS2k.gif" alt="Gif stop the blood"/>);
+				this.setState((state)=> ({treePath:3}));
+				break;
+
+		
+
+
+
+		}
 	}
 
 	returnToStart()
