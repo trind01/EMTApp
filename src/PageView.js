@@ -15,25 +15,16 @@ class PageView extends Component {
 		this.buttonsInstance = (
 			<div>
 			    <Button bsStyle="primary" bsSize="lg" block onClick={this.handleClick} id='0'>
-			      Cardiac/Heart - call 911
+			      Cardiac/Heart
 			    </Button>
 			    <Button bsStyle="primary" bsSize="lg" block onClick={this.handleClick} id='1'>
-			      Choking
+			      Breathing
 			    </Button>
 			     <Button bsStyle="primary" bsSize="lg" block onClick={this.handleClick} id='2'>
 			      Bleeding
 			    </Button>
-			    <Button bsStyle="primary" bsSize="lg" block onClick={this.handleClick} id='3'>
-			      Asthma - calls 911
-			    </Button>
-			     <Button bsStyle="primary" bsSize="lg" block onClick={this.handleClick} id='4'>
-			      Allergic rxn
-			    </Button>
-			    <Button bsStyle="primary" bsSize="lg" block onClick={this.handleClick} id='5'>
-			      Poison - calls poison control
-			    </Button>
-			     <Button bsStyle="primary" bsSize="lg" block onClick={this.handleClick} id='6'>
-			      Unsure/Diagnose me!
+			     <Button bsStyle="primary" bsSize="lg" block onClick={this.handleClick} id='3'>
+			      Unsure
 			    </Button>
 			</div>
 		);
@@ -47,9 +38,23 @@ class PageView extends Component {
 				this.path0(id);
 				break;
 			case 1:
-				this.state1(id);
+				this.path1(id);
 				break;
 			case 2:
+				break;
+			case 3:
+				break;
+			case 4:
+				break;
+			case 5:
+				break;
+			case 6:
+				break;
+			case 7:
+				break;
+			case 8:
+				break;
+			case 9:
 				break;
 		}
 	}
@@ -80,7 +85,7 @@ class PageView extends Component {
 		}
 	}
 
-	state1(id)
+	path1(id)
 	{
 
 	}
