@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Button, Label, ButtonGroup } from 'react-bootstrap';
 import './PageView.css';
 
-const wellStyles = { display: 'flex', flexDirection: 'column',height:'100vh'};
+const wellStyles = { display: 'flex', flexDirection: 'column',height:'100%'};
 
 class PageView extends Component {
 
