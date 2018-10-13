@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { Button, Label } from 'react-bootstrap';
+import { Button, Label, ButtonGroup } from 'react-bootstrap';
 import './PageView.css';
 
-const wellStyles = { display: 'flex', flexDirection: 'column',alignContent:'stretch' };
+const wellStyles = { display: 'flex', flexDirection: 'column',height:'100vh'};
 
 class PageView extends Component {
 
@@ -12,29 +12,30 @@ class PageView extends Component {
 		this.treeLabel = "What is the emergency"
 		this.handleClick = this.handleClick.bind(this);
 		this.buttonsInstance = (
-			<div className="butGroup">
-			    <Button bsStyle="primary" bsSize="large" block onClick={this.handleClick} id='0'>
+			<div>
+			    <Button bsStyle="primary" bsSize="lg" block onClick={this.handleClick} id='0'>
 			      Cardiac/Heart - call 911
 			    </Button>
-			    <Button bsStyle="primary" bsSize="large" block onClick={this.handleClick} id='1'>
+			    <Button bsStyle="primary" bsSize="lg" block onClick={this.handleClick} id='1'>
 			      Choking
 			    </Button>
-			     <Button bsStyle="primary" bsSize="large" block onClick={this.handleClick} id='2'>
+			     <Button bsStyle="primary" bsSize="lg" block onClick={this.handleClick} id='2'>
 			      Bleeding
 			    </Button>
-			    <Button bsStyle="primary" bsSize="large" block onClick={this.handleClick} id='3'>
+			    <Button bsStyle="primary" bsSize="lg" block onClick={this.handleClick} id='3'>
 			      Asthma - calls 911
 			    </Button>
-			     <Button bsStyle="primary" bsSize="large" block onClick={this.handleClick} id='4'>
+			     <Button bsStyle="primary" bsSize="lg" block onClick={this.handleClick} id='4'>
 			      Allergic rxn
 			    </Button>
-			    <Button bsStyle="primary" bsSize="large" block onClick={this.handleClick} id='5'>
+			    <Button bsStyle="primary" bsSize="lg" block onClick={this.handleClick} id='5'>
 			      Poison - calls poison control
 			    </Button>
-			     <Button bsStyle="primary" bsSize="large" block onClick={this.handleClick} id='6'>
+			     <Button bsStyle="primary" bsSize="lg" block onClick={this.handleClick} id='6'>
 			      Unsure/Diagnose me!
 			    </Button>
-		    </div>
+
+			</div>
 		);
 	}
 
@@ -82,11 +83,13 @@ class PageView extends Component {
 			<div >
 				<div className="well" style={wellStyles}>
 				  	<div className="treeLabel">
-				  		<h2>
-				  		<Label> {this.treeLabel} </Label>
-				  		</h2>
+				  		<h1>
+				  		<Label bsStyle="danger"> {this.treeLabel} </Label>
+				  		</h1>
 				  	</div>
-				  	{this.buttonsInstance}
+				  	<div className="butGroup">
+				  		{this.buttonsInstance}
+				  	</div>
 				</div>
 			</div>
 		</div>

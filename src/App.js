@@ -7,7 +7,6 @@ import PageView from './PageView.js';
 class App extends Component {
   render() {
     return (
-
       <div className="App">
         <Header/>
         <PageView/>
