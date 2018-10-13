@@ -41,6 +41,7 @@ class PageView extends Component {
 				this.path1(id);
 				break;
 			case 2:
+			this.path2(id);
 				break;
 			case 3:
 				break;
@@ -68,8 +69,24 @@ class PageView extends Component {
 				this.setState((state) => ({ treePath:1}));
 				break;
 			case 1:
-				this.treeLabel = "If they have difficult breathing perform abdominal thrusts.";
-				this.buttonsInstance = (<img src="https://www.padelandia.com/wp-content/uploads/2014/01/animacion-maniobra-de-heimlich.gif" alt="Gif of heimlich maneuver"/>);
+				this.treeLabel = "What is the breathing issue?";
+				this.buttonsInstance = (
+					<div>
+					    <Button bsStyle="primary" bsSize="lg" block onClick={this.handleClick} id='0'>
+					      Allergy
+					    </Button>
+					    <Button bsStyle="primary" bsSize="lg" block onClick={this.handleClick} id='1'>
+					      Chocking
+					    </Button>
+					     <Button bsStyle="primary" bsSize="lg" block onClick={this.handleClick} id='2'>
+					      Asthma
+					    </Button>
+					     <Button bsStyle="primary" bsSize="lg" block onClick={this.handleClick} id='3'>
+					      Unsure
+					    </Button>
+					</div>
+
+				)
 				this.setState((state) => ({ treePath:2}));
 				break;
 			case 2:
@@ -89,7 +106,32 @@ class PageView extends Component {
 	{
 
 	}
+path2(id)
+{
+	switch(parseInt(id,10)){
+		case 0:
+			this.treeLabel = "If patient has EpiPen, encourage its use.";
+			this.buttonsInstance = (<img src="https://jamanetwork.com/data/Journals/JAMA/935769/jch160035fa.png"/>);
+			this.setState((state)=> ({treePath:60}));
+			break;
+		case 1:
+			this.treeLabel = "If they have difficulty breathing, preform abdominal thrusts";
+			this.buttonInstance = (<img src="https://www.padelandia.com/wp-content/uploads/2014/01/animacion-maniobra-de-heimlich.gif" alt="preform abdominal"/>);
+			this.setState((state)=> ({treePath:61}));
+			break;
+		case 2:
+			this.treeLabel = "Give inhaler and call 911";
+			this.buttonsInstance = (<div></div>);
+			this.setState((state)=> ({treePath:62}));
+			break;
+		case 3:
+			this.treeLabel = "Wait 2-3 minutes. If it gets worse call 911";
+			this.buttonsInstance = (<div></div>);
+			this.setSate((state)=> ({treepath:63}));
+			break;
 
+	}
+}
 	returnToStart()
 	{
 		this.setState((state) => ({ treePath:0}));
