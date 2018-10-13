@@ -69,13 +69,13 @@ class PageView extends Component {
 				break;
 			case 2:
 				this.treeLabel = "Apply direct pressure to the wound";
-				this.buttonsInstance = (<img src="https://i.gifer.com/HS2k.gif" alt="Gif stop the blood");
+				this.buttonsInstance = (<img src="https://i.gifer.com/HS2k.gif" alt="Gif stop the blood"/>);
 				this.setState((state)=> ({treePath:3}));
 				break;
 			case 5:
-			this.treeLabel = "Do not attempt to get them to thorw up";
-			this.buttonsInstance = (<img src="http://www.nebraskapoison.com/App_Files/images/poisonHelp.gif" alt="posion center");
-			this.setState((state)=> ({treePath:6}));
+				this.treeLabel = "Do not attempt to get them to throw up";
+				this.buttonsInstance = (<img src="http://www.nebraskapoison.com/App_Files/images/poisonHelp.gif" alt="posion center"/>);
+				this.setState((state)=> ({treePath:6}));
 			break;
 		}
 	}
