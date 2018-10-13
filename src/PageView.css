@@ -1,0 +1,10 @@
+.treeLabel{
+	background-color: red;
+	color:white;
+	border-radius: 25px;
+	font-weight: 10px;
+}
+
+.separator{
+	padding-bottom: 10px;
+}

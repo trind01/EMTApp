@@ -84,9 +84,10 @@ class PageView extends Component {
 				<div className="well" style={wellStyles}>
 				  	<div className="treeLabel">
 				  		<h1>
-				  		<Label bsStyle="danger"> {this.treeLabel} </Label>
+				  		{this.treeLabel}
 				  		</h1>
 				  	</div>
+				  	<div className="separator"></div>
 				  	<div className="butGroup">
 				  		{this.buttonsInstance}
 				  	</div>
