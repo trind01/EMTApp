@@ -121,7 +121,7 @@ class PageView extends Component {
 				  	<div className="butGroup">
 				  		{this.buttonsInstance}
 				  		<div className="separator"></div>
-				  		<Button bsStyle="primary" bsSize="lg" block onClick={this.returnToStart}>
+				  		<Button bsStyle="warning" bsSize="medium" block onClick={this.returnToStart}>
 					      Return to Start
 					    </Button>
 				  	</div>
