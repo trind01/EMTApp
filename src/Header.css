@@ -1,0 +1,17 @@
+.NavContainer {
+	min-height: 100px;
+}
+
+.NavTitle {
+	padding-top: 11px;
+	font-size: 50px;	
+}
+
+.navbar {
+	min-height: 80px;
+}
+
+.linkItem {
+	font-size: 20px;
+	padding-top: 15px;
+}
